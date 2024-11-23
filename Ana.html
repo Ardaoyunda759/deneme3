@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #808080; /* Gri arka plan */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .title {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .chat-list {
+            margin-top: 50px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin-left: 10%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .chat-list h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .chat-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .chat-item:hover {
+            background-color: #f4f4f4;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Aramıza Hoş Geldin!</div>
+        <!-- Sohbet odaları listesi -->
+        <div class="chat-list">
+            <h3>Sohbet Odanız</h3>
+            <div class="chat-item" onclick="joinChat()">Sohbet 1</div>
+            <div class="chat-item" onclick="joinChat()">Sohbet 2</div>
+            <div class="chat-item" onclick="joinChat()">Sohbet 3</div>
+            <!-- Buraya dinamik olarak sohbet odaları eklenebilir -->
+        </div>
+        <div class="button-container">
+            <button class="button" onclick="createChat()">Sohbet Oluştur</button>
+            <button class="button" onclick="joinChat()">Sohbete Katıl</button>
+        </div>
+    </div>
+
+    <script>
+        // Kullanıcının kayıt olup olmadığını kontrol et
+        if (!localStorage.getItem("userLoggedIn")) {
+            window.location.href = "sign.html";  // Eğer kullanıcı giriş yapmamışsa sign.html'ye yönlendir
+        }
+
+        // Sohbete katılma fonksiyonu
+        function joinChat() {
+            alert("Sohbete katıldınız!");
+            // Buraya sohbet odasına giriş kodları eklenebilir
+        }
+
+        // Sohbet oluşturma fonksiyonu
+        function createChat() {
+            alert("Yeni sohbet odası oluşturuluyor!");
+            // Buraya sohbet odası oluşturma kodları eklenebilir
+        }
+
+        // Kullanıcıyı kaydetme işlemi (sign.html'ye yönlendirdiğimizde yapılmalı)
+        function registerUser() {
+            // Kullanıcıyı localStorage'a kaydediyoruz
+            localStorage.setItem("userLoggedIn", true);
+            window.location.href = "Ana.html";  // Ana sayfaya yönlendir
+        }
+    </script>
+</body>
+</html>

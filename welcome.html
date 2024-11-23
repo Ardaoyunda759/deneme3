@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #808080; /* Gri arka plan */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .welcome-message {
+            margin-bottom: 50px; /* Yazı ile buton arasındaki boşluk */
+            color: white;
+            font-size: 36px; /* Daha büyük yazı boyutu */
+            font-weight: bold;
+        }
+        .register-button {
+            padding: 20px 40px; /* Butonun daha büyük görünmesi için boyut artırıldı */
+            font-size: 24px; /* Buton yazı boyutu büyütüldü */
+            color: white;
+            background-color: #4CAF50; /* Yeşil renk */
+            border: none;
+            border-radius: 8px; /* Butona yuvarlak köşe */
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+        .register-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            Hoş geldin, Lütfen kayıt ol
+        </div>
+        <a href="sign.html" class="register-button">Kayıt Ol</a>
+    </div>
+</body>
+</html>
