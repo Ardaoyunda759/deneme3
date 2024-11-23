@@ -1,1 +1,1 @@
-# bi dur söylicem ne yapmaya çalıştığımı bi bitirem
+# sa yazıyı gördüysen bana de
